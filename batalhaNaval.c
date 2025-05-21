@@ -27,6 +27,8 @@ int main(){
     //navios
     int navio1[3] = {3, 3, 3}; //horizonta
     int navio2[3] = {3, 3, 3}; //vertical
+    int navio3[3] = {3, 3, 3}; //diagonal
+    int navio4[3] = {3, 3, 3}; //diagonal
 
     //posição do navio horizontal
     int navio1Linha = 2; //linha
@@ -34,8 +36,19 @@ int main(){
 
     //posição navio vertical
 
-    int navio2Linha = 3; //linha
-    int navio2Coluna = 7; //coluna
+    int navio2Linha = 3; 
+    int navio2Coluna = 7; 
+
+    //posição navio na diagonal
+
+    int navio3linha = 5; 
+    int navio3coluna = 5; 
+
+    //posição navio na diagonal
+
+    int navio4linha = 6; 
+    int navio4coluna = 2; 
+
 
     //colocando navio horizontal
     for (int i = 0; i < 3; i++)
@@ -49,6 +62,17 @@ int main(){
         tabuleiro[navio2Linha + i][navio2Coluna] = navio2[i];
     }
 
+    //colocando navio na diagonal
+    for (int i = 0; i < 3; i++)
+    {
+        tabuleiro[navio3linha + i][navio3coluna + i] = navio3[i];
+    }
+
+    //colocando navio na diagonal
+    for (int i = 0; i < 3; i++)
+    {
+        tabuleiro[navio4linha + i][navio4coluna + i] = navio4[i];
+    }
 
      //exibindo as casas do tabuleiro
     for (int i = 0, e = 1; i < 10, e < 11; i++, e++) // i = linha | e = tabela de 1 a 10 para localizar as casas
@@ -68,5 +92,8 @@ int main(){
         printf("\n");
     }      
 
+
+
+        
     return 0;
 }
